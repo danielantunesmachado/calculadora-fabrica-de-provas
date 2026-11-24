@@ -1,0 +1,175 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prova presencial ou on-line? | Fábrica de Provas</title><meta name="description" content="Simule o custo total e por candidato de uma prova presencial ou on-line. Dimensione salas, aplicadores, impressão, logística e plataforma."><style>
+*{box-sizing:border-box}body{margin:0;background:#f6f7fb;color:#12131a;font:16px/1.5 'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}header{background:#0c0c0c;color:white}header>div,main,footer{max-width:1180px;margin:auto;padding:0 28px}header>div{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:20px;font-weight:800;letter-spacing:-1px}.brand b{color:#c6f050}header a{color:white;font-size:14px}main{padding-top:36px}h1,h2,h3{line-height:1.1;letter-spacing:-.045em}h1{font-size:clamp(2.4rem,5vw,4.8rem);max-width:880px;margin:0 0 12px}h1 span{color:#3824ea}h2{font-size:1.55rem;margin:0 0 16px}p{margin:0 0 14px}.lead{max-width:770px;color:#4a4c5a;font-size:1.08rem}.layout{display:grid;grid-template-columns:minmax(280px,.8fr) minmax(0,1.2fr);gap:18px;align-items:start;margin:26px 0}.box,.summary{padding:clamp(20px,3vw,33px);border-radius:16px}.box{background:white;border:1px solid #dfe0eb}.summary{background:#141322;color:white}.summary p{color:#d5d4e4}.metric{display:flex;flex-wrap:wrap;gap:5px;margin:17px 0 12px}.metric button{border:1px solid #555465;background:transparent;color:white;font:inherit;font-size:.92rem;border-radius:20px;padding:7px 12px;cursor:pointer}.metric button[aria-pressed=true]{background:#c6f050;color:#141322;border-color:#c6f050}.barline{display:flex;justify-content:space-between;gap:14px;margin:14px 0 5px}.track{background:#302f40;height:9px;overflow:hidden;border-radius:5px}.track span{display:block;background:#b9aafa;height:100%;border-radius:5px}.track .low{background:#c6f050}.barline strong{font-variant-numeric:tabular-nums}.note{font-size:.9rem;color:#545767}.summary .note{color:#d5d4e4;margin:18px 0 0}.field{display:block;font-weight:620;margin:13px 0 4px}.inputs{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.inputs label:first-child{grid-column:1/-1}input,select,textarea{font:inherit;color:#141322;border:1px solid #b9bdcc;border-radius:7px;padding:9px 10px;background:white;width:100%;min-height:43px}input:invalid,[aria-invalid=true]{border-color:#a92527}input:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #806aff;outline-offset:2px}.error{color:#a11928;font-weight:650;margin:10px 0 0}.small{font-size:.9rem}.subsection{margin-bottom:16px}summary{cursor:pointer;font-weight:740;padding:6px 0}summary::marker{color:#3824ea}.subsection p{margin:12px 0;color:#545767}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left;font-size:.96rem}th,td{padding:9px 7px;border-bottom:1px solid #e4e4ee}td:not(:first-child),th:not(:first-child){text-align:right}td input{max-width:125px;text-align:right}th{font-size:.9rem}.muted{color:#686a78}.cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;background:#eae7ff}.cta p{margin:0;max-width:575px}.btn{background:#3824ea;color:#fff;font:inherit;font-weight:650;padding:11px 18px;border:none;border-radius:7px;cursor:pointer;text-decoration:none;display:inline-block}.linkbtn{border:0;background:transparent;font:inherit;color:#3824ea;font-weight:650;padding:8px 0;cursor:pointer;text-decoration:underline}.actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.summaryRow{margin:0 0 11px}.guide{max-width:880px}.guide p{margin:10px 0}.screenreader{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}footer{padding-top:20px;padding-bottom:30px;font-size:.9rem;color:#555668}footer a{color:inherit}dialog{padding:25px;border:0;border-radius:16px;max-width:min(540px,94vw);box-shadow:0 20px 100px #0003}dialog::backdrop{background:#17172780}dialog textarea{margin:10px 0;min-height:140px;resize:vertical}.close{float:right;border:0;background:transparent;font:inherit;cursor:pointer}.disabled{opacity:.55;pointer-events:none}@media(max-width:780px){.layout{grid-template-columns:1fr}header>div,main,footer{padding-left:16px;padding-right:16px}main{padding-top:26px}td,th{padding:8px 4px}.subsection td input{min-width:64px}.subsection .tablewrap table{min-width:475px}.cta .btn{width:100%;text-align:center}header>div{height:58px}}@media print{header,.inputsBox,.subsection,.cta,footer,.metric,.actions,dialog{display:none!important}.layout{display:block}.summary{color:black;background:#fff;border:1px solid #ccc}.summary p,.summary .note{color:#333}.barline{color:#111}h1{font-size:32px}}
+
+.layout{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr)}.summary{border-top:5px solid #c6f050}.lead{max-width:780px}.sectionHead{margin-top:30px}.subsection summary{display:flex;justify-content:space-between;gap:1rem;align-items:center}.subsection summary:before{content:'+';color:#3824ea}.subsection[open] summary:before{content:'−'}.subsection summary span{flex:1}.subsection summary output{font-variant-numeric:tabular-nums}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:13px 22px}.fields label{font-weight:600;display:flex;flex-direction:column;justify-content:end;gap:4px;font-size:.94rem}.fields label[hidden]{display:none}.fields h3{grid-column:1/-1;font-size:1.07rem;margin:12px 0 0;letter-spacing:0}.fields input,.fields select{font-variant-numeric:tabular-nums}.audit{padding-top:15px}.audit td{white-space:nowrap}.summary h2{font-size:1.65rem}.srnote{margin-top:12px}.summary .winner{font-weight:680;color:#c6f050;margin-top:20px}.inputsBox .fields{grid-template-columns:1fr 1fr}.cta{margin-top:18px} @media(max-width:780px){.layout{grid-template-columns:1fr}.box,.summary{padding:18px}.subsection .tablewrap table{min-width:0}.fields{grid-template-columns:1fr 1fr}.fields label{font-size:.9rem}h1{font-size:2.6rem}} @media(max-width:400px){.fields,.inputsBox .fields{grid-template-columns:1fr}}</style></head><body><header><div><div class="brand">Fábrica <b>de Provas</b></div><a href="#proposta">Solicitar proposta</a></div></header><main>
+<h1>Quanto custa uma prova<br><span>presencial ou on-line?</span></h1>
+<p class="lead">Simule a mesma edição nos dois formatos. Comece com o número de inscritos e substitua os valores de exemplo pelos da sua instituição.</p>
+<div class="layout"><section class="box inputsBox"><h2>Sua aplicação</h2><div class="fields" id="volume"></div><p class="error" role="status" id="error"></p></section>
+<section class="summary"><h2>Comparação de custos</h2><div class="metric" id="metrics" aria-label="Indicador de custo"></div><div id="bars"></div><p class="winner" id="winner" aria-live="polite"></p><p class="note" id="people"></p></section></div>
+<h2 class="sectionHead">O que entra na conta</h2><p class="note">Abra cada grupo para ajustar quantidades e preços. Use zero para serviços incluídos em outra tarifa ou sem custo adicional.</p><div id="groups"></div>
+<details class="box subsection"><summary><span>Conferir a memória de cálculo</span></summary><p id="sizing"></p><div class="tablewrap audit"><table><thead><tr><th>Despesa estimada</th><th>Presencial</th><th>On-line</th></tr></thead><tbody id="audit"></tbody></table></div></details>
+<section class="box cta" id="proposta"><div><h2>Quer orçar essa aplicação?</h2><p>Leve o resumo da sua simulação para a equipe da Fábrica de Provas.</p></div><button class="btn" id="quote">Preparar pedido de proposta</button></section>
+<footer>Valores iniciais fictícios para planejamento. O preço comercial depende do escopo da sua edição. &nbsp;·&nbsp; <a href="https://fabricadeprovas.com.br/politica-privacidade">Privacidade</a></footer></main>
+<dialog id="dialog"><button class="close" id="close" aria-label="Fechar">✕</button><h2>Seu pedido de proposta</h2><p>Copie o resumo e compartilhe com a equipe no canal de propostas da Fábrica.</p><label for="message">Resumo editável</label><textarea id="message"></textarea><div class="actions"><button id="copy" class="linkbtn">Copiar resumo</button><a class="btn" href="https://fabricadeprovas.com.br/?utm_source=calculadora&amp;utm_medium=ferramenta&amp;utm_campaign=custo_por_candidato" target="_blank" rel="noopener">Solicitar proposta na Fábrica</a></div><p id="copied" role="status"></p></dialog>
+<script>
+const $ = id => document.getElementById(id);
+const money = n => n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const count = n => n.toLocaleString('pt-BR',{maximumFractionDigits:2});
+const fields = {};
+const groups = {};
+const categories = [
+  ['shared','Custos comuns','Cada modalidade recebe o mesmo valor para planejamento, conteúdo e correção. Lance apenas as despesas da instituição que se repetem nos dois cenários.'],
+  ['staff','Presencial · locais e equipe','As vagas são distribuídas uniformemente entre polos e turnos. Salas, aplicadores e reservas são dimensionados pelos inscritos. Informe o custo completo do turno de trabalho, incluindo preparação e fechamento.'],
+  ['paper','Presencial · materiais e logística','Escolha entre orçar os itens separadamente ou usar o pacote da gráfica. Frete de retorno, reimpressões e tratamento manual podem ser cobrados à parte.'],
+  ['digital','On-line · plataforma e operação','Escolha a unidade de cobrança da proposta. Serviços opcionais já cobertos no preço da plataforma devem ficar em zero.']
+];
+for(const [id,title,guide] of categories){
+  const details=document.createElement('details'); details.className='box subsection';
+  details.innerHTML='<summary><span></span><output></output></summary><p></p><div class="fields"></div>';
+  details.querySelector('span').textContent=title;
+  details.querySelector('p').textContent=guide;
+  $('groups').append(details); groups[id]=details;
+}
+function section(group,title){
+  const h=document.createElement('h3');h.textContent=title;groups[group].querySelector('.fields').append(h);
+}
+function field(group,id,label,value,options={}){
+  const wrap=document.createElement('label');wrap.textContent=label;
+  const e=document.createElement(options.choices?'select':'input');e.id=id;e.name=id;
+  if(options.choices){
+    for(const [key,title] of options.choices)e.add(new Option(title,key));
+  }else{
+    e.type='number';e.min=options.min??0;e.max=options.max??100000000;e.step=options.step??0.01;e.required=true;
+  }
+  e.value=value;wrap.append(e);
+  (group==='volume'?$('volume'):groups[group].querySelector('.fields')).append(wrap);
+  fields[id]={e,wrap,when:options.when};
+}
+const integer={step:1},positive={min:1,step:1},percent={min:0,max:100,step:.1};
+field('volume','n','Inscritos',1000,{...positive,max:1000000});
+field('volume','mins','Duração prevista (min)',120,{...positive,max:1440});
+field('volume','attendance','Comparecimento (%)',85,percent);
+field('volume','completion','Conclusão entre presentes (%)',98,percent);
+const common=(...args)=>field('shared',...args);
+common('plan','Planejamento, edital e gestão (R$/edição)',1500);
+common('content','Banco de questões, elaboração e revisão (R$/edição)',2000);
+common('registration','Inscrição e comunicação (R$/inscrito)',0.8);
+common('grading','Correção e banca (R$/prova concluída)',2);
+common('appeals','Recursos, resultados e certificação (R$/edição)',350);
+const staff=(...args)=>field('staff',...args);
+section('staff','Salas e polos');
+staff('sites','Polos de aplicação',2,positive);staff('shifts','Turnos por polo',1,positive);
+staff('capacity','Vagas por sala',35,positive);staff('rent','Locação (R$/sala por turno)',100);
+staff('facility','Limpeza, energia e infraestrutura (R$/polo por turno)',180);
+section('staff','Aplicação e apoio');
+staff('staffRoom','Aplicadores por sala',1,integer);staff('staffPay','Custo por aplicador por turno (R$)',150);
+staff('reserve','Aplicadores de reserva por polo/turno',1,integer);
+staff('supervisors','Coordenadores por polo/turno',1,integer);staff('superPay','Custo por coordenador por turno (R$)',260);
+staff('floaters','Fiscais de corredor e apoio por polo/turno',2,integer);staff('floatPay','Custo por fiscal de apoio por turno (R$)',130);
+staff('training','Recrutamento e treinamento (R$/edição)',400);
+staff('expenses','Transporte local e alimentação (R$/pessoa por turno)',30);
+staff('travel','Passagens, hospedagem e diárias de viagem (R$/edição)',0);
+staff('safety','Segurança, brigada e primeiros socorros (R$/polo por turno)',150);
+staff('access','Acessibilidade, intérpretes e salas extras (R$/edição)',0);
+staff('staffExtras','Encargos adicionais sobre remuneração da equipe (%)',0,percent);
+const paper=(...args)=>field('paper',...args);
+paper('printMode','Forma de orçar o material','items',{choices:[['items','Itens separados'],['package','Pacote por inscrito']]});
+const separate={when:['printMode','items']},pack={when:['printMode','package']};
+paper('sheets','Folhas por caderno',12,{...positive,...separate});paper('spare','Cadernos de reserva (%)',5,{...percent,...separate});
+paper('sheetCost','Impressão (R$/folha)',0.16,separate);paper('answerSheet','Cartão-resposta e acabamento (R$/caderno)',0.7,separate);
+paper('layout','Diagramação e provas de gráfica (R$/edição)',300,separate);paper('seal','Envelopes, lacres e malotes (R$/sala por turno)',12,separate);
+paper('forward','Frete de ida e distribuição (R$/polo)',180,separate);paper('scan','Leitura óptica ou digitalização (R$/entrega)',0.8,separate);
+paper('bundle','Pacote com impressão, entrega e digitalização (R$/inscrito)',5,pack);
+paper('back','Coleta e frete de retorno (R$/polo)',120);
+paper('manual','Respostas com tratamento manual (quantidade estimada)',0,integer);
+paper('manualRate','Tratamento manual (R$/folha de resposta)',3);
+paper('reprint','Reimpressões extraordinárias, guarda e descarte (R$/edição)',0);
+paper('pExtra','Outros custos presenciais e contingência (R$/edição)',0);
+const digital=(...args)=>field('digital',...args);
+digital('billing','Cobrança da plataforma','registered',{choices:[['registered','Por inscrito'],['session','Por prova iniciada'],['hour','Por avaliado-hora'],['lot','Lote fechado de avaliados-hora']]});
+digital('regPrice','Plataforma (R$/inscrito)',9,{when:['billing','registered']});
+digital('sessionPrice','Plataforma (R$/prova iniciada)',10,{when:['billing','session']});
+digital('hourPrice','Plataforma (R$/avaliado-hora)',5,{when:['billing','hour']});
+digital('lotFee','Valor fechado do lote (R$)',8000,{when:['billing','lot']});
+digital('lotUnits','Avaliados-hora incluídos no lote',1600,{...integer,when:['billing','lot']});
+digital('overPrice','Excedente (R$/avaliado-hora)',5,{when:['billing','lot']});
+digital('partial','Duração média de uma sessão interrompida (min)',30,{...positive,max:1440,when:['billing','hour','lot']});
+section('digital','Operação, fiscalização e atendimento');
+digital('setup','Implantação, integrações, pré-teste e gestão (R$/edição)',800);
+digital('extraHours','Horas de operação além da franquia',0);digital('extraRate','Hora técnica excedente (R$/h)',100);
+digital('monitor','Monitoramento remoto (R$/sessão iniciada)',2);
+digital('checks','Verificações faciais adicionais por sessão',0,integer);digital('checkRate','Preço por verificação adicional (R$)',0);
+digital('report','Análise de ocorrências e relatório (R$/edição)',0);
+digital('support','Atendimento ao candidato (R$/inscrito)',1);digital('supportHours','Horas de atendimento contratadas',0);
+digital('floor','Piso do serviço de atendimento (R$/hora de operação)',0);
+digital('retain','Guarda adicional de gravações (GB-mês)',0);digital('gbRate','Armazenamento adicional (R$/GB-mês)',0);
+digital('host','Hospedagem adicional, acessibilidade e contingência (R$/edição)',0);
+function calculate(v){
+  const present=Math.round(v.n*v.attendance/100),done=Math.round(present*v.completion/100);
+  const slots=v.sites*v.shifts, base=Math.floor(v.n/slots), remainder=v.n%slots;
+  const activeSlots=Math.min(v.n,slots), activeSites=Math.min(v.sites,v.n);
+  const rooms=(slots-remainder)*Math.ceil(base/v.capacity)+remainder*Math.ceil((base+1)/v.capacity);
+  const invigilators=rooms*v.staffRoom+activeSlots*v.reserve;
+  const supervisors=activeSlots*v.supervisors, floaters=activeSlots*v.floaters;
+  const salary=invigilators*v.staffPay+supervisors*v.superPay+floaters*v.floatPay;
+  const books=Math.ceil(v.n*(100+v.spare)/100);
+  const units=done*Math.ceil(v.mins/60)+(present-done)*Math.ceil(Math.min(v.partial,v.mins)/60);
+  const platform={registered:v.n*v.regPrice,session:present*v.sessionPrice,hour:units*v.hourPrice,lot:v.lotFee+Math.max(0,units-v.lotUnits)*v.overPrice}[v.billing];
+  const rows=[];
+  const add=(group,label,cost)=>rows.push({group,label,cost:Math.round((cost+Number.EPSILON)*100)/100});
+  add('shared','Planejamento e gestão',v.plan);add('shared','Conteúdo e revisão',v.content);
+  add('shared','Inscrição e comunicação',v.n*v.registration);add('shared','Correção e banca',done*v.grading);add('shared','Recursos e resultados',v.appeals);
+  add('staff','Locação de salas',rooms*v.rent);add('staff','Infraestrutura e limpeza',activeSlots*v.facility);
+  add('staff','Aplicadores titulares e reservas',invigilators*v.staffPay);add('staff','Coordenação',supervisors*v.superPay);
+  add('staff','Fiscais de corredor e apoio',floaters*v.floatPay);add('staff','Encargos adicionais',salary*v.staffExtras/100);
+  add('staff','Recrutamento e treinamento',v.training);add('staff','Transporte local e alimentação',(invigilators+supervisors+floaters)*v.expenses);
+  add('staff','Viagens e hospedagem',v.travel);add('staff','Segurança e primeiros socorros',activeSlots*v.safety);add('staff','Acessibilidade presencial',v.access);
+  if(v.printMode==='items'){
+    add('paper','Diagramação',v.layout);add('paper','Impressão, cartões e acabamento',books*(v.sheets*v.sheetCost+v.answerSheet));add('paper','Lacres e malotes',rooms*v.seal);
+    add('paper','Frete de ida',activeSites*v.forward);add('paper','Leitura e digitalização',done*v.scan);
+  }else add('paper','Pacote de produção gráfica',v.n*v.bundle);
+  add('paper','Frete de retorno',activeSites*v.back);add('paper','Tratamento manual',v.manual*v.manualRate);add('paper','Reimpressões, guarda e descarte',v.reprint);add('paper','Outros custos presenciais',v.pExtra);
+  add('digital','Licença da plataforma',platform);add('digital','Implantação e pré-teste',v.setup);add('digital','Horas técnicas excedentes',v.extraHours*v.extraRate);
+  add('digital','Fiscalização remota',present*v.monitor);add('digital','Verificações faciais excedentes',present*v.checks*v.checkRate);
+  add('digital','Análise de ocorrências',v.report);add('digital','Atendimento aos candidatos',Math.max(v.n*v.support,v.supportHours*v.floor));
+  add('digital','Retenção adicional',v.retain*v.gbRate);add('digital','Hospedagem e outros custos on-line',v.host);
+  const totals={shared:0,staff:0,paper:0,digital:0};
+  for(const row of rows) totals[row.group]+=Math.round(row.cost*100);
+  for(const key of Object.keys(totals))totals[key]/=100;
+  return {present,done,rooms,activeSlots,invigilators,books,units,rows,totals,costs:[totals.shared+totals.staff+totals.paper,totals.shared+totals.digital]};
+}
+const modes=['Presencial','On-line'],metrics=['Custo total','Por inscrito','Por prova concluída'];
+let selected=0,current;
+metrics.forEach((label,i)=>{const b=document.createElement('button');b.textContent=label;b.onclick=()=>{selected=i;render()};$('metrics').append(b)});
+function auditRow(label,left,right){const tr=$('audit').insertRow();const th=document.createElement('th');th.scope='row';th.textContent=label;tr.append(th);for(const val of [left,right])tr.insertCell().textContent=val==null?'—':money(val)}
+function render(){
+  const v={};let invalid=null;
+  for(const [id,{e,wrap,when}] of Object.entries(fields)){
+    wrap.hidden=!!when&&!when.slice(1).includes(fields[when[0]].e.value);e.disabled=wrap.hidden;
+    const bad=!e.disabled&&!e.validity.valid;e.setAttribute('aria-invalid',String(bad));if(bad&&!invalid)invalid=e;
+    v[id]=e.type==='number'?(Number.isFinite(e.valueAsNumber)?e.valueAsNumber:0):e.value;
+  }
+  $('error').textContent=invalid?'Revise o campo “'+invalid.parentElement.firstChild.textContent+'”.':'';
+  $('bars').replaceChildren();$('audit').replaceChildren();$('quote').disabled=!!invalid;
+  [...$('metrics').children].forEach((b,i)=>b.setAttribute('aria-pressed',String(i===selected)));
+  if(invalid){current=null;$('winner').textContent='Aguardando um valor válido.';$('people').textContent='';$('sizing').textContent='';Object.values(groups).forEach(g=>g.querySelector('output').textContent='—');return}
+  const r=calculate(v);current={v,r};
+  for(const key of Object.keys(groups))groups[key].querySelector('output').textContent=money(r.totals[key]);
+  const denom=[1,v.n,r.done][selected],max=Math.max(...r.costs);
+  r.costs.forEach((val,i)=>{
+    const line=document.createElement('div');line.className='barline';const strong=document.createElement('strong');strong.textContent=denom?money(val/denom):'Sem entregas';line.append(modes[i],strong);
+    const track=document.createElement('div');track.className='track';const bar=document.createElement('span');bar.style.width=(max&&denom?val/max*100:0)+'%';if(val===Math.min(...r.costs))bar.className='low';track.append(bar);$('bars').append(line,track);
+  });
+  const diff=Math.abs(Math.round(r.costs[0]*100)-Math.round(r.costs[1]*100))/100;
+  $('winner').textContent=diff?'Neste cenário, a prova '+(r.costs[0]<r.costs[1]?'presencial':'on-line')+' custa '+money(diff)+' a menos no total ('+count(diff/max*100)+'% de economia).':'Os dois formatos têm o mesmo custo total.';
+  $('people').textContent=count(v.n)+' inscritos · '+count(r.present)+' presentes · '+count(r.done)+' provas concluídas em cada formato.';
+  $('sizing').textContent=count(r.rooms)+' salas-turno e '+count(r.invigilators)+' turnos de aplicador, incluindo reservas. '+(v.printMode==='items'?count(r.books)+' cadernos, já com reserva. ':'')+(v.billing==='hour'||v.billing==='lot'?count(r.units)+' avaliados-hora estimados. Cada hora iniciada conta por sessão. ':'')+'As faltas mantêm os custos de vagas e materiais reservados. No suporte on-line, vale o maior entre a cobrança por inscrito e o piso horário contratado.';
+  for(const row of r.rows) auditRow(row.label,row.group==='digital'?null:row.cost,row.group==='digital'||row.group==='shared'?row.cost:null);
+  auditRow('Custo total',...r.costs);
+}
+for(const {e} of Object.values(fields)){e.addEventListener('input',render);if(e.tagName==='SELECT')e.addEventListener('change',render)}
+$('quote').onclick=()=>{if(!current)return;const {v,r}=current;$('message').value='Gostaria de uma proposta para '+count(v.n)+' inscritos, com prova de '+count(v.mins)+' minutos.\n\nEstimativa da instituição\nPresencial: '+money(r.costs[0])+'\nOn-line: '+money(r.costs[1])+'\nCobrança simulada: '+fields.billing.e.selectedOptions[0].textContent+'\nComparecimento: '+count(v.attendance)+'% · Conclusão entre presentes: '+count(v.completion)+'%.';$('copied').textContent='';$('dialog').showModal()};
+$('close').onclick=()=>$('dialog').close();
+$('copy').onclick=async()=>{try{await navigator.clipboard.writeText($('message').value);$('copied').textContent='Resumo copiado.'}catch{$('message').select();$('copied').textContent='Use o comando Copiar do navegador.'}};
+render();
+</script></body></html>
